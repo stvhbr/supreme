@@ -1,0 +1,25 @@
+[
+  {
+    "key": "group_application_fields",
+    "title": "Application Fields",
+    "fields": [
+      {"key": "field_app_icon_svg", "label": "Icon (SVG or PNG)", "name": "icon_svg", "type": "image", "return_format": "array", "preview_size": "thumbnail"},
+      {"key": "field_app_hero_image", "label": "Hero Image", "name": "hero_image", "type": "image", "required": 1, "return_format": "array", "preview_size": "supreme-hero"},
+      {"key": "field_app_hero_alt", "label": "Hero Image Alt Text", "name": "hero_image_alt", "type": "text"},
+      {"key": "field_app_intro", "label": "Intro Text", "name": "intro_text", "type": "wysiwyg", "required": 1, "toolbar": "basic", "media_upload": 0},
+      {"key": "field_app_featured_products", "label": "Featured Products", "name": "featured_products", "type": "relationship", "post_type": ["product"], "max": 6, "return_format": "object", "ui": 1},
+      {"key": "field_app_featured_brands", "label": "Featured Brands", "name": "featured_brands", "type": "relationship", "post_type": ["brand"], "max": 4, "return_format": "object", "ui": 1},
+      {"key": "field_app_project_examples", "label": "Project Examples", "name": "project_examples", "type": "repeater", "button_label": "Add Project Example", "layout": "block", "max": 6, "sub_fields": [
+        {"key": "field_pe_image", "label": "Project Photo", "name": "image", "type": "image", "return_format": "array"},
+        {"key": "field_pe_alt", "label": "Image Alt Text", "name": "image_alt", "type": "text"},
+        {"key": "field_pe_caption", "label": "Caption", "name": "caption", "type": "text"},
+        {"key": "field_pe_project_name", "label": "Project Name", "name": "project_name", "type": "text"}
+      ]},
+      {"key": "field_app_body_content", "label": "Body Content", "name": "body_content", "type": "wysiwyg", "toolbar": "full", "media_upload": 1},
+      {"key": "field_app_seo_title", "label": "SEO Title", "name": "seo_title", "type": "text"},
+      {"key": "field_app_seo_description", "label": "SEO Description", "name": "seo_description", "type": "textarea", "rows": 3}
+    ],
+    "location": [[{"param": "post_type", "operator": "==", "value": "application"}]],
+    "menu_order": 0, "position": "normal", "style": "default", "label_placement": "top", "instruction_placement": "label", "active": true
+  }
+]

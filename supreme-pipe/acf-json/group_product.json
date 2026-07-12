@@ -1,0 +1,41 @@
+[
+  {
+    "key": "group_product_fields",
+    "title": "Product Fields",
+    "fields": [
+      {"key": "field_product_eyebrow", "label": "Eyebrow Label", "name": "eyebrow_label", "type": "text", "placeholder": "Heavy Gauge"},
+      {"key": "field_product_hero_image", "label": "Hero Image", "name": "hero_image", "type": "image", "required": 1, "return_format": "array", "preview_size": "supreme-card"},
+      {"key": "field_product_hero_image_alt", "label": "Hero Image Alt Text", "name": "hero_image_alt", "type": "text", "placeholder": "Black iron steel pipe close-up"},
+      {"key": "field_product_intro_text", "label": "Intro Paragraph", "name": "intro_text", "type": "wysiwyg", "required": 1, "toolbar": "basic", "media_upload": 0},
+      {"key": "field_product_nominal_size", "label": "Nominal Size Range", "name": "nominal_size_range", "type": "text", "placeholder": "15mm – 300mm"},
+      {"key": "field_product_standards", "label": "Standards", "name": "standards", "type": "repeater", "layout": "table", "button_label": "Add Standard", "sub_fields": [
+        {"key": "field_product_standard_code", "label": "Standard Code", "name": "code", "type": "text", "placeholder": "PNS 26:2018"},
+        {"key": "field_product_standard_desc", "label": "Description", "name": "description", "type": "text"},
+        {"key": "field_product_standard_resource", "label": "Resource Page", "name": "resource_page", "type": "relationship", "post_type": ["resource"], "max": 1, "return_format": "object"}
+      ]},
+      {"key": "field_product_size_table", "label": "Size Chart (PDF)", "name": "size_table", "type": "file", "return_format": "array"},
+      {"key": "field_product_catalogue", "label": "Product Catalogue (PDF)", "name": "catalogue_file", "type": "file", "return_format": "array"},
+      {"key": "field_product_related_applications", "label": "Related Applications", "name": "related_applications", "type": "relationship", "post_type": ["application"], "max": 7, "return_format": "object", "ui": 1},
+      {"key": "field_product_related_brands", "label": "Related Brands", "name": "related_brands", "type": "relationship", "post_type": ["brand"], "max": 6, "return_format": "object", "ui": 1},
+      {"key": "field_product_content_blocks", "label": "Content Blocks", "name": "content_blocks", "type": "flexible_content", "button_label": "Add Content Block", "layouts": [
+        {"key": "layout_product_text", "name": "text_block", "label": "Text Block", "sub_fields": [
+          {"key": "field_cb_heading", "label": "Heading", "name": "heading", "type": "text"},
+          {"key": "field_cb_content", "label": "Content", "name": "content", "type": "wysiwyg", "toolbar": "full", "media_upload": 1}
+        ]},
+        {"key": "layout_product_image_text", "name": "image_text", "label": "Image + Text", "sub_fields": [
+          {"key": "field_cb_it_image", "label": "Image", "name": "image", "type": "image", "return_format": "array"},
+          {"key": "field_cb_it_alt", "label": "Image Alt Text", "name": "image_alt", "type": "text"},
+          {"key": "field_cb_it_heading", "label": "Heading", "name": "heading", "type": "text"},
+          {"key": "field_cb_it_content", "label": "Content", "name": "content", "type": "wysiwyg", "toolbar": "basic"},
+          {"key": "field_cb_it_layout", "label": "Image Position", "name": "layout", "type": "select", "choices": {"left": "Image Left", "right": "Image Right"}, "default_value": "left"}
+        ]}
+      ]},
+      {"key": "field_product_cta_label", "label": "CTA Label Override", "name": "cta_label", "type": "text", "placeholder": "Request a Free Quote"},
+      {"key": "field_product_seo_title", "label": "SEO Title", "name": "seo_title", "type": "text"},
+      {"key": "field_product_seo_description", "label": "SEO Description", "name": "seo_description", "type": "textarea", "rows": 3},
+      {"key": "field_product_og_image", "label": "OG Image", "name": "og_image", "type": "image", "return_format": "array"}
+    ],
+    "location": [[{"param": "post_type", "operator": "==", "value": "product"}]],
+    "menu_order": 0, "position": "normal", "style": "default", "label_placement": "top", "instruction_placement": "label", "active": true
+  }
+]

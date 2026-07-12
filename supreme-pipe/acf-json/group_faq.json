@@ -1,0 +1,13 @@
+[
+  {
+    "key": "group_faq_fields",
+    "title": "FAQ Fields",
+    "fields": [
+      {"key": "field_faq_answer", "label": "Answer", "name": "faq_answer", "type": "wysiwyg", "required": 1, "toolbar": "basic", "media_upload": 0},
+      {"key": "field_faq_related_products", "label": "Related Products", "name": "related_products", "type": "relationship", "post_type": ["product"], "max": 5, "return_format": "object", "ui": 1},
+      {"key": "field_faq_sort_order", "label": "Sort Order", "name": "sort_order", "type": "number", "default_value": 10, "min": 1, "max": 999}
+    ],
+    "location": [[{"param": "post_type", "operator": "==", "value": "faq"}]],
+    "menu_order": 0, "position": "normal", "style": "default", "label_placement": "top", "instruction_placement": "label", "active": true
+  }
+]

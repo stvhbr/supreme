@@ -1,0 +1,20 @@
+[
+  {
+    "key": "group_resource_fields",
+    "title": "Resource Fields",
+    "fields": [
+      {"key": "field_res_type", "label": "Resource Type", "name": "resource_type_select", "type": "select", "required": 1, "choices": {"standard": "Pipe Standard", "size_guide": "Size Guide", "catalogue": "Product Catalogue", "test_report": "Test Report"}, "default_value": "standard", "return_format": "value"},
+      {"key": "field_res_standard_code", "label": "Standard Code", "name": "standard_code", "type": "text", "placeholder": "PNS 26:2018", "conditional_logic": [[{"field": "field_res_type", "operator": "==", "value": "standard"}]]},
+      {"key": "field_res_issuing_body", "label": "Issuing Body", "name": "issuing_body", "type": "text", "conditional_logic": [[{"field": "field_res_type", "operator": "==", "value": "standard"}]]},
+      {"key": "field_res_year", "label": "Version Year", "name": "version_year", "type": "text"},
+      {"key": "field_res_description", "label": "Description", "name": "body_content", "type": "wysiwyg", "required": 1, "toolbar": "full", "media_upload": 1},
+      {"key": "field_res_download_file", "label": "Download File (PDF)", "name": "download_file", "type": "file", "return_format": "array"},
+      {"key": "field_res_optin_required", "label": "Require Email Opt-in?", "name": "optin_required", "type": "true_false", "default_value": 0, "ui": 1, "ui_on_text": "Yes", "ui_off_text": "No"},
+      {"key": "field_res_related_products", "label": "Related Products", "name": "related_products", "type": "relationship", "post_type": ["product"], "max": 10, "return_format": "object", "ui": 1},
+      {"key": "field_res_seo_title", "label": "SEO Title", "name": "seo_title", "type": "text"},
+      {"key": "field_res_seo_description", "label": "SEO Description", "name": "seo_description", "type": "textarea", "rows": 3}
+    ],
+    "location": [[{"param": "post_type", "operator": "==", "value": "resource"}]],
+    "menu_order": 0, "position": "normal", "style": "default", "label_placement": "top", "instruction_placement": "label", "active": true
+  }
+]

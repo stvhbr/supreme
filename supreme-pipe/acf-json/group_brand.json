@@ -1,0 +1,42 @@
+[
+  {
+    "key": "group_brand_fields",
+    "title": "Brand Fields",
+    "fields": [
+      {"key": "field_brand_logo", "label": "Brand Logo", "name": "brand_logo", "type": "image", "required": 1, "return_format": "array", "preview_size": "medium"},
+      {"key": "field_brand_hero_bg", "label": "Hero Background Image", "name": "brand_hero_bg", "type": "image", "return_format": "array", "preview_size": "supreme-card"},
+      {"key": "field_brand_tagline", "label": "Brand Tagline", "name": "brand_tagline", "type": "text"},
+      {"key": "field_brand_gauge_badge", "label": "Gauge Badge", "name": "gauge_badge", "type": "select", "choices": {"heavy": "Heavy Gauge", "light": "Light Gauge", "fire": "Fire Sprinkler", "structural": "Structural", "spiral": "Spiral / LSAW", "fittings": "Fittings"}, "allow_null": 1, "return_format": "value"},
+      {"key": "field_brand_intro", "label": "Intro Paragraph", "name": "intro_paragraph", "type": "wysiwyg", "required": 1, "toolbar": "basic", "media_upload": 0},
+      {"key": "field_brand_product_type_cards", "label": "Product Type Cards", "name": "product_type_cards", "type": "repeater", "button_label": "Add Product Type", "max": 8, "layout": "block", "sub_fields": [
+        {"key": "field_ptc_image", "label": "Product Image", "name": "image", "type": "image", "return_format": "array"},
+        {"key": "field_ptc_image_alt", "label": "Image Alt Text", "name": "image_alt", "type": "text"},
+        {"key": "field_ptc_name", "label": "Product Name", "name": "name", "type": "text"},
+        {"key": "field_ptc_subtitle", "label": "Subtitle", "name": "subtitle", "type": "text"},
+        {"key": "field_ptc_specs", "label": "Spec Rows", "name": "specs", "type": "repeater", "button_label": "Add Spec", "layout": "table", "sub_fields": [
+          {"key": "field_ptc_spec_label", "label": "Label", "name": "label", "type": "text"},
+          {"key": "field_ptc_spec_value", "label": "Value", "name": "value", "type": "text"}
+        ]},
+        {"key": "field_ptc_cta_label", "label": "CTA Button Label", "name": "cta_label", "type": "text"},
+        {"key": "field_ptc_cta_product", "label": "Link to Product", "name": "cta_product", "type": "relationship", "post_type": ["product"], "max": 1, "return_format": "object"}
+      ]},
+      {"key": "field_brand_standards", "label": "Standards & Compliance", "name": "standards_list", "type": "repeater", "button_label": "Add Standard", "layout": "table", "sub_fields": [
+        {"key": "field_bs_code", "label": "Standard Code", "name": "code", "type": "text"},
+        {"key": "field_bs_resource", "label": "Resource Page", "name": "resource_page", "type": "relationship", "post_type": ["resource"], "max": 1, "return_format": "object"}
+      ]},
+      {"key": "field_brand_applications", "label": "Applications", "name": "applications", "type": "relationship", "post_type": ["application"], "max": 7, "return_format": "object", "ui": 1},
+      {"key": "field_brand_related_brands", "label": "Related Brands", "name": "related_brands", "type": "relationship", "post_type": ["brand"], "max": 3, "return_format": "object", "ui": 1},
+      {"key": "field_brand_body_content", "label": "Extended Body Content", "name": "body_content", "type": "flexible_content", "button_label": "Add Content Section", "layouts": [
+        {"key": "layout_brand_text", "name": "text_block", "label": "Text Block", "sub_fields": [
+          {"key": "field_bbc_heading", "label": "Heading", "name": "heading", "type": "text"},
+          {"key": "field_bbc_content", "label": "Content", "name": "content", "type": "wysiwyg", "toolbar": "full", "media_upload": 1}
+        ]}
+      ]},
+      {"key": "field_brand_seo_title", "label": "SEO Title", "name": "seo_title", "type": "text"},
+      {"key": "field_brand_seo_description", "label": "SEO Description", "name": "seo_description", "type": "textarea", "rows": 3},
+      {"key": "field_brand_og_image", "label": "OG Image", "name": "og_image", "type": "image", "return_format": "array"}
+    ],
+    "location": [[{"param": "post_type", "operator": "==", "value": "brand"}]],
+    "menu_order": 0, "position": "normal", "style": "default", "label_placement": "top", "instruction_placement": "label", "active": true
+  }
+]

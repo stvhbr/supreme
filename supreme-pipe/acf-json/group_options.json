@@ -1,0 +1,83 @@
+[
+  {
+    "key": "group_options_homepage",
+    "title": "Homepage Options",
+    "fields": [
+      {"key": "field_hp_hero_headline", "label": "Hero Headline", "name": "hero_headline", "type": "text", "required": 1},
+      {"key": "field_hp_hero_subline", "label": "Hero Sub-headline", "name": "hero_subline", "type": "text"},
+      {"key": "field_hp_hero_bg", "label": "Hero Background Image", "name": "hero_bg_image", "type": "image", "required": 1, "return_format": "array", "preview_size": "supreme-hero"},
+      {"key": "field_hp_hero_bg_alt", "label": "Hero Background Alt Text", "name": "hero_bg_image_alt", "type": "text"},
+      {"key": "field_hp_stats", "label": "Stats Bar", "name": "stats", "type": "repeater", "button_label": "Add Stat", "min": 1, "max": 5, "layout": "table", "sub_fields": [
+        {"key": "field_stat_number", "label": "Number / Value", "name": "number", "type": "text", "placeholder": "30+"},
+        {"key": "field_stat_label", "label": "Label", "name": "label", "type": "text", "placeholder": "Years of Experience"}
+      ]},
+      {"key": "field_hp_who_headline", "label": "Who We Are Headline", "name": "who_headline", "type": "text"},
+      {"key": "field_hp_who_content", "label": "Who We Are Content", "name": "who_content", "type": "wysiwyg", "toolbar": "basic", "media_upload": 0},
+      {"key": "field_hp_certifications", "label": "Certifications", "name": "certifications", "type": "repeater", "button_label": "Add Certification", "layout": "table", "sub_fields": [
+        {"key": "field_cert_logo", "label": "Logo", "name": "logo", "type": "image", "return_format": "array"},
+        {"key": "field_cert_alt", "label": "Alt Text", "name": "alt", "type": "text"},
+        {"key": "field_cert_name", "label": "Certification Name", "name": "name", "type": "text"}
+      ]},
+      {"key": "field_hp_where_headline", "label": "Where We Are Headline", "name": "where_headline", "type": "text"}
+    ],
+    "location": [[{"param": "options_page", "operator": "==", "value": "supreme-homepage"}]],
+    "menu_order": 0, "position": "normal", "style": "default", "label_placement": "top", "instruction_placement": "label", "active": true
+  },
+  {
+    "key": "group_options_cta",
+    "title": "Global CTA Options",
+    "fields": [
+      {"key": "field_cta_headline", "label": "CTA Headline", "name": "cta_headline", "type": "text", "required": 1},
+      {"key": "field_cta_bg_image", "label": "CTA Background Image", "name": "cta_bg_image", "type": "image", "return_format": "array"},
+      {"key": "field_cta_primary_label", "label": "Primary Button Label", "name": "cta_primary_label", "type": "text", "default_value": "Request a Quote"},
+      {"key": "field_cta_primary_url", "label": "Primary Button URL", "name": "cta_primary_url", "type": "url"},
+      {"key": "field_cta_secondary_label", "label": "Secondary Button Label", "name": "cta_secondary_label", "type": "text", "default_value": "Download Brochure"},
+      {"key": "field_cta_brochure_file", "label": "Brochure PDF", "name": "brochure_file", "type": "file", "return_format": "array"}
+    ],
+    "location": [[{"param": "options_page", "operator": "==", "value": "supreme-cta"}]],
+    "menu_order": 0, "position": "normal", "style": "default", "label_placement": "top", "instruction_placement": "label", "active": true
+  },
+  {
+    "key": "group_options_company",
+    "title": "Company Info Options",
+    "fields": [
+      {"key": "field_co_name", "label": "Company Name", "name": "company_name", "type": "text", "default_value": "Supreme Steel Pipe Corporation"},
+      {"key": "field_co_tagline", "label": "Tagline", "name": "company_tagline", "type": "text"},
+      {"key": "field_co_phone", "label": "Main Phone", "name": "phone_main", "type": "text"},
+      {"key": "field_co_email", "label": "Main Email", "name": "email_main", "type": "email"},
+      {"key": "field_co_address", "label": "Head Office Address", "name": "head_office_address", "type": "textarea", "rows": 3},
+      {"key": "field_co_facebook", "label": "Facebook URL", "name": "facebook_url", "type": "url"},
+      {"key": "field_co_tiktok", "label": "TikTok URL", "name": "tiktok_url", "type": "url"},
+      {"key": "field_co_instagram", "label": "Instagram URL", "name": "instagram_url", "type": "url"},
+      {"key": "field_co_linkedin", "label": "LinkedIn URL", "name": "linkedin_url", "type": "url"}
+    ],
+    "location": [[{"param": "options_page", "operator": "==", "value": "supreme-company"}]],
+    "menu_order": 0, "position": "normal", "style": "default", "label_placement": "top", "instruction_placement": "label", "active": true
+  },
+  {
+    "key": "group_options_footer",
+    "title": "Footer Options",
+    "fields": [
+      {"key": "field_ft_logo", "label": "Footer Logo", "name": "footer_logo", "type": "image", "return_format": "array"},
+      {"key": "field_ft_tagline", "label": "Footer Tagline", "name": "footer_tagline", "type": "textarea", "rows": 3},
+      {"key": "field_ft_company_links", "label": "Company Column Links", "name": "footer_company_links", "type": "repeater", "button_label": "Add Link", "layout": "table", "sub_fields": [
+        {"key": "field_ft_link_label", "label": "Label", "name": "label", "type": "text"},
+        {"key": "field_ft_link_url", "label": "URL", "name": "url", "type": "url"}
+      ]},
+      {"key": "field_ft_copyright", "label": "Copyright Text", "name": "copyright_text", "type": "text"}
+    ],
+    "location": [[{"param": "options_page", "operator": "==", "value": "supreme-footer"}]],
+    "menu_order": 0, "position": "normal", "style": "default", "label_placement": "top", "instruction_placement": "label", "active": true
+  },
+  {
+    "key": "group_options_seo",
+    "title": "SEO Defaults",
+    "fields": [
+      {"key": "field_seo_og_image", "label": "Default OG Image", "name": "og_default_image", "type": "image", "return_format": "array"},
+      {"key": "field_seo_schema_logo", "label": "Schema.org Logo", "name": "schema_logo", "type": "image", "return_format": "array"},
+      {"key": "field_seo_founded", "label": "Founded Year", "name": "schema_founded_year", "type": "text", "default_value": "1991"}
+    ],
+    "location": [[{"param": "options_page", "operator": "==", "value": "supreme-seo"}]],
+    "menu_order": 0, "position": "normal", "style": "default", "label_placement": "top", "instruction_placement": "label", "active": true
+  }
+]

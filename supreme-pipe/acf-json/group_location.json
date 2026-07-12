@@ -1,0 +1,19 @@
+[
+  {
+    "key": "group_location_fields",
+    "title": "Location Fields",
+    "fields": [
+      {"key": "field_loc_type", "label": "Location Type", "name": "location_type", "type": "select", "required": 1, "choices": {"main_office": "Main Office", "warehouse": "Warehouse / Plant", "dealer": "Authorized Dealer", "distributor": "Distributor"}, "default_value": "dealer", "return_format": "value"},
+      {"key": "field_loc_address", "label": "Street Address", "name": "address", "type": "text", "required": 1, "placeholder": "123 Industrial Ave, Valenzuela"},
+      {"key": "field_loc_city_region", "label": "City / Province", "name": "city_region", "type": "text", "required": 1, "placeholder": "Valenzuela City, Metro Manila"},
+      {"key": "field_loc_phone", "label": "Phone", "name": "phone", "type": "text"},
+      {"key": "field_loc_email", "label": "Email", "name": "email", "type": "email"},
+      {"key": "field_loc_operating_hours", "label": "Operating Hours", "name": "operating_hours", "type": "text"},
+      {"key": "field_loc_coordinates", "label": "Coordinates (lat, lng)", "name": "coordinates", "type": "text", "placeholder": "14.7006, 120.9590"},
+      {"key": "field_loc_google_maps_url", "label": "Google Maps URL", "name": "google_maps_url", "type": "url"},
+      {"key": "field_loc_sort_order", "label": "Sort Order", "name": "sort_order", "type": "number", "default_value": 10, "min": 1, "max": 99}
+    ],
+    "location": [[{"param": "post_type", "operator": "==", "value": "location"}]],
+    "menu_order": 0, "position": "normal", "style": "default", "label_placement": "top", "instruction_placement": "label", "active": true
+  }
+]
