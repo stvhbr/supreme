@@ -1425,8 +1425,9 @@ ul { list-style: none; }
 @media (max-width: 768px) {
 
   /* ── Header ── */
-  .header-inner { padding-block: 14px; flex-wrap: wrap; }
+  .header-inner { padding-block: 14px; flex-wrap: wrap; row-gap: 0; }
   .main-nav {
+    order: 10;           /* always wraps below logo + toggle row */
     display: none;
     width: 100%;
     flex-direction: column;
