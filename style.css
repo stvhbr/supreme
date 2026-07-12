@@ -787,7 +787,6 @@ ul { list-style: none; }
   font-weight: 400;
   color: var(--text-body);
   line-height: 1.4;
-  white-space: nowrap;
 }
 .product-item-arrow {
   font-family: var(--font-display);
@@ -839,7 +838,6 @@ ul { list-style: none; }
   font-size: 14px;
   color: var(--text-body);
   line-height: 1.4;
-  white-space: nowrap;
 }
 .material-item-arrow {
   font-family: var(--font-display);
@@ -1059,8 +1057,8 @@ ul { list-style: none; }
 .where-headline {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 52px;
-  line-height: 63px;
+  font-size: clamp(28px, 5vw, 52px);
+  line-height: 1.2;
   text-transform: uppercase;
   color: var(--text-section);
 }
@@ -1112,6 +1110,9 @@ ul { list-style: none; }
   font-weight: 400;
   color: var(--text-body);
   line-height: 1.4;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  min-width: 0;
 }
 .location-row-val.highlight {
   font-weight: 700;
@@ -1499,6 +1500,9 @@ ul { list-style: none; }
   /* ── Products ── */
   .products-cols { flex-direction: column; }
   .products-right-col { width: 100%; padding: 24px; }
+  .product-list-item { gap: 16px; }
+  .material-item { gap: 16px; }
+  .standards-item { gap: 16px; }
 
   /* ── Applications ── */
   .app-tabs { gap: 16px; overflow-x: auto; padding-bottom: 0; flex-wrap: nowrap; }
